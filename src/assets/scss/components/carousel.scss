@@ -1,0 +1,36 @@
+.carousel-container {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;
+
+  &__carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__carousel-control {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin: 0 40px;
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 50px;
+    border-radius: 4px;
+    &__left {
+      left: 10px;
+    }
+
+    &__right {
+      right: 10px
+    }
+
+  }
+}
+

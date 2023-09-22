@@ -1,0 +1,60 @@
+
+.current-card-container {
+  background-color: white; 
+  margin: 0 20px; 
+  border-radius: 10px;
+
+  &__current-card {
+    max-height: 650px;
+    max-width: 300px;
+    margin: 15px;
+    &__image {
+      user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: fill;
+    }
+
+    &__title {
+      margin: 0px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 18px;
+      background-color: white;
+    }
+
+    &__subtitle {
+      margin: 0px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+  }
+
+}
+
+
+.previous-card, .next-card {
+  max-height: 300px;
+  max-width: 200px;
+  &__image {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+    filter: blur(3px); 
+  }
+}

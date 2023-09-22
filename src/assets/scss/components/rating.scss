@@ -1,0 +1,30 @@
+.star {
+  font-size: 30px; // Adjust the size as needed
+  display: inline-block;
+  margin-right: 5px; // Adjust spacing between stars
+  color: #333; // Initial dark color
+
+  &::before {
+    content: "\2605"; // Unicode character for a solid star
+    display: block;
+    text-align: center;
+    font-size: 24px; // Adjust the star size
+    margin-top: 2px; // Adjust vertical alignment
+    font-family: "Comic Sans MS", cursive; // Comic-style font
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // Add shadow for a comic effect
+    color: transparent; // Initially transparent star
+  }
+
+  &.filled {
+    color: #ffd700; // Bright yellow for filled stars
+    &::before {
+      color: #ffd700; // Bright yellow for filled stars
+    }
+  }
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin: 0 0px 20px 0px;
+}
