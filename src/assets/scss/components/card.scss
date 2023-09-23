@@ -1,7 +1,7 @@
 
 .current-card-container {
   background-color: white; 
-  margin: 0 20px; 
+  margin: 0 50px; 
   border-radius: 10px;
 
   &__current-card {
@@ -15,11 +15,11 @@
       -webkit-user-drag: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 100% !important;
-      height: 100% !important;
+      width: 300px !important;
+      height: 300px !important;
       min-width: 100%;
       min-height: 100%;
-      object-fit: fill;
+      object-fit: contain;
     }
 
     &__title {
@@ -41,8 +41,8 @@
 
 
 .previous-card, .next-card {
-  max-height: 300px;
-  max-width: 200px;
+  width: 200px !important;
+  height: 200px !important;
   &__image {
     user-drag: none;
     user-select: none;
@@ -50,8 +50,8 @@
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    width: 100% !important;
-    height: 100% !important;
+    width: 150px !important;
+    height: 150px !important;
     min-width: 100%;
     min-height: 100%;
     object-fit: contain;
