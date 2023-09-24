@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <loading-comics v-if="isLoading" />
-    <carussel-card v-if="!isLoading && randomComics.length" />
+  <div data-testId="HomeViewContainer">
+    <loading-comics v-if="isLoading" data-testId="loadingComics" />
+    <carussel-card v-if="!isLoading && randomComics.length" data-testId="carousel" />
     <error-comics v-if="error" />
   </div>
 </template>
