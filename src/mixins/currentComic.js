@@ -5,7 +5,6 @@ export default {
   data() {
     return {
       currentIndex: 0,
-      // showRating: true,
     };
   },
   computed: {
