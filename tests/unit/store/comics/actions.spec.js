@@ -1,11 +1,11 @@
 /* eslint-disable import/extensions */
 import { actions } from "@/store/modules/comics/actions";
-import ComicsApi from "@/api/ComicsApi";
+import ComicsApi from "@/api/comicsApi";
 import { types } from "@/store/modules/comics/types";
 import selectedRateArray from "../../../__mocks__/comics/selectedRateArray";
 
 // eslint-disable-next-line global-require
-jest.mock("@/api/ComicsApi.js", () => require("../../../__mocks__/comics/comicsApi"));
+jest.mock("@/api/comicsApi.js", () => require("../../../__mocks__/comics/comicsApi"));
 
 describe("test actions in comics module", () => {
   // eslint-disable-next-line no-unused-vars

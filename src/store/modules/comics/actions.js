@@ -3,7 +3,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-confusing-arrow */
 /* eslint-disable import/prefer-default-export */
-import ComicsApi from "@/api/ComicsApi";
+import ComicsApi from "@/api/comicsApi";
 import { addSelectedRate } from "@/helpers/formatRandomComics";
 import { types } from "./types";
 
