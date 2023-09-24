@@ -89,7 +89,6 @@ export default {
   mixins: [CurrentComic],
   data() {
     return {
-      // currentIndex: 0,
       showTooltip: false,
       previousIcon: "<",
       nextIcon: ">",
@@ -118,14 +117,6 @@ export default {
   },
   methods: {
     ...mapActions(types.PATH, { fetchRandomComics: types.actions.FETCH_RANDOM_COMICS }),
-    // prevSlide() {
-    //   // eslint-disable-next-line operator-linebreak
-    //   this.currentIndex =
-    //     (this.currentIndex - 1 + this.randomComics.length) % this.randomComics.length;
-    // },
-    // nextSlide() {
-    //   this.currentIndex = (this.currentIndex + 1) % this.randomComics.length;
-    // },
     refreshComics() {
       this.fetchRandomComics();
     },
