@@ -3,7 +3,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-confusing-arrow */
 /* eslint-disable import/prefer-default-export */
-import comicsApi from "@/api/comicsApi";
+import ComicsApi from "@/api/ComicsApi";
 import { addSelectedRate } from "@/helpers/formatRandomComics";
 import { types } from "./types";
 
@@ -11,7 +11,8 @@ export const actions = {
   async [types.actions.FETCH_RANDOM_COMICS]({ commit }) {
     try {
       commit(types.mutations.SET_IS_LOADING, true);
-      const { data } = await comicsApi.getRandomComics();
+      const { data } = await ComicsApi.getRandomComics();
+
       const selectedRateArray = addSelectedRate(data);
 
       commit(types.mutations.SET_RANDOM_COMICS, selectedRateArray);
@@ -27,8 +28,8 @@ export const actions = {
     commit(types.mutations.SET_ERROR, payload);
   },
   [types.actions.UPDATE_RANDOM_COMICS]({ commit, state }, payload) {
-    const updateRandomComics = state.randomComics.map((obj) =>
-      obj.num === payload.num ? { ...payload } : obj
+    const updateRandomComics = state.randomComics.map((comic) =>
+      comic.num === payload.num ? { ...payload } : comic
     );
     commit(types.mutations.SET_RANDOM_COMICS, updateRandomComics);
   },
