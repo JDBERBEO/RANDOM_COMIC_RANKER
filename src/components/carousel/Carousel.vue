@@ -77,12 +77,14 @@
 </template>
 
 <script>
+/* eslint-disable vue/multi-word-component-names */
 import { types } from "@/store/modules/comics/types";
 import { mapActions, mapState } from "vuex";
 import CurrentComic from "@/mixins/currentComic";
 import Rating from "./Rating.vue";
 
 export default {
+  name: "Carousel",
   components: {
     Rating,
   },

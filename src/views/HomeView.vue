@@ -1,13 +1,13 @@
 <template>
   <div data-testId="HomeViewContainer">
     <loading-comics v-if="isLoading" data-testId="loadingComics" />
-    <carussel-card v-if="!isLoading && randomComics.length" data-testId="carousel" />
+    <carousel v-if="!isLoading && randomComics.length" data-testId="carousel" />
     <error-comics v-if="error" />
   </div>
 </template>
 
 <script>
-import CarusselCard from "@/components/carousel/CarusselCard.vue";
+import Carousel from "@/components/carousel/Carousel.vue";
 import { mapActions, mapState } from "vuex";
 import { types } from "@/store/modules/comics/types";
 import LoadingComics from "@/components/carousel/LoadingComics.vue";
@@ -16,7 +16,7 @@ import ErrorComics from "@/components/carousel/ErrorComics.vue";
 export default {
   name: "HomeView",
   components: {
-    CarusselCard,
+    Carousel,
     LoadingComics,
     ErrorComics,
   },
