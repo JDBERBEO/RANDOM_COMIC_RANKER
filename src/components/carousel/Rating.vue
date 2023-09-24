@@ -6,26 +6,38 @@
       v-for="rating in 5"
       :key="rating"
       class="star"
-      :class="{ filled: rating <= selectedRating }"
+      :class="{ filled: rating <= selectedRating || rating <= currentComic.selectedRating }"
       @click="selectRating(rating)"
     ></label>
   </div>
 </template>
 
 <script>
+import CurrentComic from "@/mixins/currentComic";
+import { mapActions, mapState } from "vuex";
+import { types } from "@/store/modules/comics/types";
+
 export default {
   name: "RatingMain",
-  props: {
-    msg: String,
-  },
+  mixins: [CurrentComic],
   data() {
     return {
-      selectedRating: 0,
+      wha: 0,
     };
   },
+  computed: {
+    ...mapState(types.PATH, ["selectedRating"]),
+  },
   methods: {
+    ...mapActions(types.PATH, { updateRandomComics: types.actions.UPDATE_RANDOM_COMICS }),
     selectRating(rating) {
-      this.selectedRating = rating;
+      this.updateSelectedRating(rating);
+      this.updateRatingInCurrentComic(this.selectedRating);
+    },
+    updateRatingInCurrentComic(comicRated) {
+      this.currentComic.selectedRating = comicRated;
+      this.updateRandomComics(this.currentComic);
+      // this.selectedRating = 0;
     },
   },
 };

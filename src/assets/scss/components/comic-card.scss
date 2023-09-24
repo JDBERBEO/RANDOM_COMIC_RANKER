@@ -1,12 +1,17 @@
 
 .current-card-container {
+  padding: 5px;
   background-color: white; 
   margin: 0 50px; 
   border-radius: 10px;
+  transition: transform 0.3s ease; 
 
+  &:hover {
+      transform: scale(1.1); 
+  }
   &__current-card {
-    max-height: 650px;
-    max-width: 300px;
+    max-height: 1050px;
+    max-width: 600px;
     margin: 15px;
     &__image {
       user-drag: none;
@@ -15,8 +20,8 @@
       -webkit-user-drag: none;
       -webkit-user-select: none;
       -ms-user-select: none;
-      width: 300px !important;
-      height: 300px !important;
+      width: 250px !important;
+      height: 250px !important;
       min-width: 100%;
       min-height: 100%;
       object-fit: contain;
