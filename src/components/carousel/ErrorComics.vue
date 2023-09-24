@@ -21,10 +21,14 @@ export default {
     ...mapState(types.PATH, ["error"]),
   },
   methods: {
-    ...mapActions(types.PATH, { fetchRandomComics: types.actions.FETCH_RANDOM_COMICS }),
+    ...mapActions(types.PATH, {
+      fetchRandomComics: types.actions.FETCH_RANDOM_COMICS,
+      updateError: types.actions.UPDATE_ERROR_COMICS,
+    }),
   },
   mounted() {
     this.intervalId = setInterval(() => {
+      this.updateError(false);
       this.fetchRandomComics();
     }, this.retryLapse);
   },
