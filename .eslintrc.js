@@ -14,7 +14,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)"],
+      files: [
+        "**/tests/__mocks__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)",
+        "**/tests/integration/**/*.spec.{j,t}s?(x)",
+        "setup-jest.js",
+      ],
       env: {
         jest: true,
       },
