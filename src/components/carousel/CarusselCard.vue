@@ -62,6 +62,7 @@
       <button
         @click="nextSlide"
         class="carousel-container__carousel-control carousel-container__carousel-control__right"
+        data-testId="nextButton"
       >
         {{ nextIcon }}
       </button>

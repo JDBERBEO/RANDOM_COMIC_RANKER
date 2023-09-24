@@ -25,9 +25,4 @@ module.exports = {
   },
   modulePathIgnorePatterns: ["<rootDir>/src/components", "<rootDir>/src/views"],
   setupFilesAfterEnv: ["<rootDir>/setup-jest.js"],
-  // globals: {
-  //   conf: {
-  //     ...muiConf.dev,
-  //   },
-  // },
 };

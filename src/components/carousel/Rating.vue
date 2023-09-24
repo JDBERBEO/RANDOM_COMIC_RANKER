@@ -3,6 +3,7 @@
 <template>
   <div class="rating">
     <label
+      data-testId="star"
       v-for="rating in 5"
       :key="rating"
       class="star"
