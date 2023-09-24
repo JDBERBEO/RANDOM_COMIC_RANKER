@@ -37,7 +37,6 @@ export default {
     updateRatingInCurrentComic(comicRated) {
       this.currentComic.selectedRating = comicRated;
       this.updateRandomComics(this.currentComic);
-      // this.selectedRating = 0;
     },
   },
 };
