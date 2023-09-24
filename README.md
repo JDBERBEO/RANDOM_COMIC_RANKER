@@ -1,6 +1,10 @@
 # front_comic
 
+For tecnhical documentation about the component check the following url: https://artistic-raisin-e5c.notion.site/RANDOM_COMIC_RANKER-3fa0093607e149478feb3da6b60526f6
+
 ## Project setup
+
+Please use node versión 16.20.2
 ```
 npm install
 ```
@@ -19,11 +23,13 @@ npm run build
 ```
 npm run test:unit
 ```
+### Run your integration tests
+```
+npm run test:integration
+```
 
 ### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The project runs in: https://random-comic-ranker.vercel.app/
