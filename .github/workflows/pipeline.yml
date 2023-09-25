@@ -1,5 +1,5 @@
 name: Vercel Deploy and Test
-env: ${{ secrets.VERCEL_TOKEN }}
+
 on:
   push:
     branches:
