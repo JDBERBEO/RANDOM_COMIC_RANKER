@@ -1,0 +1,33 @@
+name: Vercel Deploy and Test
+
+on:
+  push:
+    branches:
+      - main # Change this to the branch you want to trigger the deployment from
+
+jobs:
+  deploy_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set Up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.2.0 
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Tests
+      run: npm test:integration
+
+    - name: Deploy to Vercel
+      run: |
+        npm install -g vercel
+        vercel login --token ${{ secrets.VERCEL_TOKEN }}
+        vercel --prod
+      env:
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
