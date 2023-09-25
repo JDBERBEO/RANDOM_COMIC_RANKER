@@ -1,5 +1,5 @@
 name: Vercel Deploy and Test
-
+env: ${{ secrets.VERCEL_TOKEN }}
 on:
   push:
     branches:
@@ -30,6 +30,6 @@ jobs:
     - name: Deploy to Vercel
       run: |
         npm install -g vercel
-        vercel --prod --yes
+        vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
